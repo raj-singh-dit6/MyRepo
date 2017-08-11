@@ -67,11 +67,10 @@ public class UserDetails {
 	}
 
 	
-	public UserDetails(int user_id, String user_firstname,
+	public UserDetails(String user_firstname,
 			String user_lastname, int user_age, String user_email,
 			String user_country,
 			ArrayList<UserContactDetails> user_contact_details) {
-		this.user_id = user_id;
 		this.user_firstname = user_firstname;
 		this.user_lastname = user_lastname;
 		this.user_age = user_age;

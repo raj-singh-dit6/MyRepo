@@ -17,10 +17,9 @@ public class UserContactDetails {
 		this.user_id = user_id;
 	}
 	
-	public UserContactDetails(int user_id, int contact_id, int phone_number, String comments) {
+	public UserContactDetails(int user_id,int phone_number, String comments) {
 		super();
 		this.user_id = user_id;
-		this.contact_id = contact_id;
 		this.phone_number = phone_number;
 		this.comments = comments;
 	}
