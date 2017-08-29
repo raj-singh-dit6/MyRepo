@@ -1,6 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
         <h1>Add New Employee</h1>  
-       <form:form method="post" action="addEmp.html">    
+       <form:form method="post" action="addEmp">    
         <table >    
          <tr>    
           <td>Name : </td>   
