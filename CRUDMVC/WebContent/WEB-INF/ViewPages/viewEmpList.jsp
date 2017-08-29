@@ -15,4 +15,4 @@
    </c:forEach>  
    </table>  
    <br/>  
-   <a href="EmployeeForm.html">Add New Employee</a>  
+   <a href="EmployeeForm">Add New Employee</a>  
