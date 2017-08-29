@@ -1,0 +1,33 @@
+CREATE DATABASE  IF NOT EXISTS `raintree`;
+
+USE `raintree`;
+
+CREATE TABLE `patient` (
+    `_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+    `pn` varchar(11) DEFAULT NULL,
+    `first` varchar(15) DEFAULT NULL,
+    `last` varchar(25) DEFAULT NULL,
+    `dob` date DEFAULT NULL,
+    PRIMARY KEY (`_id`)
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `raintree`.`patient` (`pn`, `first`, `last`, `dob`) VALUES ('00000001', 'John', 'Smith', '1993-12-13');
+INSERT INTO `raintree`.`patient` (`pn`, `first`, `last`, `dob`) VALUES ('00000002', 'Leo', 'Messi', '1995-11-27');
+INSERT INTO `raintree`.`patient` (`pn`, `first`, `last`, `dob`) VALUES ('00000003', 'Cristiano', 'Ronaldo', '1990-01-17');
+INSERT INTO `raintree`.`patient` (`pn`, `first`, `last`, `dob`) VALUES ('00000004', 'John', 'Doe', '1989-02-23');
+INSERT INTO `raintree`.`patient` (`pn`, `first`, `last`, `dob`) VALUES ('00000005', 'John', 'Tee', '1979-04-24');
+
+
+CREATE TABLE `insurance` (
+  `_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `patient_id` int(10) unsigned NOT NULL,
+  `iname` varchar(40) DEFAULT NULL,
+  `from_date` date DEFAULT NULL,
+  `to_date` date DEFAULT NULL,
+  PRIMARY KEY (`_id`),
+  KEY `_idx` (`patient_id`),
+  CONSTRAINT `` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `raintree`.`insurance` (`patient_id`, `iname`, `from_date`, `to_date`) VALUES ('2', 'Medicare', '2017-01-01', '2017-12-31');
+INSERT INTO `raintree`.`insurance` (`patient_id`, `iname`, `from_date`, `to_date`) VALUES ('2', 'Blue Shield', '2017-01-01', '2017-06-30');
