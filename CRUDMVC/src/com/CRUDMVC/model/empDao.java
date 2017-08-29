@@ -48,7 +48,7 @@ public class empDao {
 	
 	public List<Employee> getAllEmployeeDetails()
 	{
-		lQuery="select * from employee"; 
+		lQuery="select empName,empDepartment,empDesignation,empSalary from employee"; 
 		return template.query(lQuery, new RowMapper<Employee>(){
 				public Employee mapRow(ResultSet rs,int row) throws SQLException {
 					 Employee e=new Employee();
